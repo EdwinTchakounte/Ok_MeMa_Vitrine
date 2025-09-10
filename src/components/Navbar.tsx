@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-auto sm:px-auto lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
 
           {/* Language Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            {/* <button
+            <button
               onClick={toggleLanguage}
               className="flex items-center space-x-2 px-3 py-1 bg-golden/10 hover:bg-golden/20 rounded-lg transition-colors duration-200"
             >
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
               <span className="text-sm font-inter font-medium text-golden uppercase">
                 {language}
               </span>
-            </button> */}
+            </button>
 
             <div className="md:hidden">
               <button

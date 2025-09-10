@@ -50,7 +50,7 @@ function App() {
           <Media />
         </main>
         <Footer />
-        
+        <WhatsAppFloat />
       </div>
     </LanguageProvider>
   );
