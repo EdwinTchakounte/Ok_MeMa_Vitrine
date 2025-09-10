@@ -71,6 +71,10 @@ const Navbar: React.FC = () => {
                 {language}
               </span>
             </button>
+            <button onClick={() => scrollToSection('home')} className="focus:outline-none">
+              <img src="logo.png" alt="MEMA Logo" className="h-8 w-auto object-contain" />
+            </button>
+            <span className='font-bold'>MEMA</span>
 
             <div className="md:hidden">
               <button
