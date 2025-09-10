@@ -21,21 +21,20 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex items-center flex-shrink-0">
             <a href="#home" className="flex items-center space-x-2">
               <img src="logo.png" alt="MEMA Logo" className="h-8 w-8 object-contain" />
               <span className="text-2xl font-poppins font-bold text-navy">
                 MEMA
               </span>
             </a>
-            
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
+          <div className="hidden md:flex items-center flex-1 justify-center">
+            <div className="flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection('home')}
                 className="text-slate-700 hover:text-golden font-inter font-medium transition-colors duration-200"
@@ -64,10 +63,10 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Language Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3 flex-shrink-0">
             <button
               onClick={toggleLanguage}
-              className="flex items-center space-x-2 px-3 py-1 bg-golden/10 hover:bg-golden/20 rounded-lg transition-colors duration-200"
+              className="flex items-center space-x-1.5 px-2.5 py-1.5 bg-golden/10 hover:bg-golden/20 rounded-lg transition-colors duration-200"
             >
               <Globe className="w-4 h-4 text-golden" />
               <span className="text-sm font-inter font-medium text-golden uppercase">
@@ -78,7 +77,7 @@ const Navbar: React.FC = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-slate-700 hover:text-golden transition-colors duration-200"
+                className="p-2 text-slate-700 hover:text-golden transition-colors duration-200 -mr-2"
               >
                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
