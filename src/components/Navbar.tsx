@@ -23,12 +23,12 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-auto sm:px-auto lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          {/* <div className="flex-shrink-0">
             <span className="text-2xl font-poppins font-bold text-navy">
               MEMA
             </span>
           
-          </div>
+          </div> */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
