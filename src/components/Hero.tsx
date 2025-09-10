@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
               
               {/* Main Title */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-[1.1] tracking-tight">
-                {t('hero.title')}
+                Méditation Matinale
               </h1>
               
               {/* Subtitle */}
