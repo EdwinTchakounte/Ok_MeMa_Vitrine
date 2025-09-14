@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Quote, Star, Heart } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote, Star, Heart, Download } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -11,19 +11,19 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    content: "Chaque matin, ces moments de méditation transforment ma journée. La parole divine résonne en moi avec une force nouvelle, me donnant la paix intérieure et la guidance nécessaire pour affronter les défis quotidiens.",
+    content: "Ces méditations matinales transforment ma journée. La parole divine me donne paix et guidance pour affronter les défis quotidiens.",
     role: "Prophète Silas",
     context: "Méditation matinale - Psaume 23"
   },
   {
     id: 2,
-    content: "Les méditations matinales ont révolutionné ma relation avec le Très-Haut. Je ressens une connexion profonde qui m'accompagne tout au long de la journée. C'est un moment de pure grâce et de renouvellement spirituel.",
+    content: "Les méditations ont révolutionné ma relation avec le Très-Haut. Une connexion profonde m'accompagne toute la journée.",
     role: "Frère François",
     context: "Prière de l'aube - Jean 14:27"
   },
   {
     id: 3,
-    content: "Depuis que j'ai intégré ces méditations dans ma routine matinale, ma foi s'est approfondie. Chaque enseignement apporte une lumière nouvelle sur ma marche spirituelle et fortifie mon âme pour la journée qui commence.",
+    content: "Depuis ces méditations matinales, ma foi s'approfondit. Chaque enseignement fortifie mon âme pour la journée.",
     role: "Sœur Sandrine",
     context: "Réflexion matinale - Matthieu 6:33"
   }
@@ -63,34 +63,38 @@ const TestimonialsSlider: React.FC = () => {
     setTimeout(() => setIsAutoPlaying(true), 4000);
   };
 
+  const handleDownload = () => {
+    window.open('https://drive.google.com/file/d/16teXJzvh0QUE-iW2qBveW39bsPizLj6i/view?usp=drive_link', '_blank');
+  };
+
   return (
-    <div className="relative bg-black min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+    <div className="relative bg-white min-h-[70vh] py-16 px-4 sm:px-6 lg:px-8">
       {/* Subtle background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white opacity-[0.02] rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-white opacity-[0.03] rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-white opacity-[0.02] rounded-full blur-lg"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-slate-100 opacity-40 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-50 opacity-50 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-slate-50 opacity-30 rounded-full blur-lg"></div>
       </div>
 
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center items-center mb-6">
-            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-white opacity-30 mr-4"></div>
-            <Heart className="text-white opacity-60 mr-3" size={24} />
-            <h2 className="text-3xl md:text-4xl font-light text-white tracking-wide">
+        <div className="text-center mb-12">
+          <div className="flex justify-center items-center mb-4">
+            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-slate-300 mr-4"></div>
+            <Heart className="text-slate-600 mr-3" size={24} />
+            <h2 className="text-2xl md:text-3xl font-light text-slate-800 tracking-wide">
               Témoignages de Foi
             </h2>
-            <Heart className="text-white opacity-60 ml-3" size={24} />
-            <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-white opacity-30 ml-4"></div>
+            <Heart className="text-slate-600 ml-3" size={24} />
+            <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-slate-300 ml-4"></div>
           </div>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-base text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
             Découvrez comment les méditations matinales transforment la vie spirituelle
           </p>
-          <div className="mt-6 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="text-white opacity-40 fill-current" size={16} />
+                <Star key={i} className="text-slate-400 fill-current" size={14} />
               ))}
             </div>
           </div>
@@ -101,38 +105,38 @@ const TestimonialsSlider: React.FC = () => {
           {/* Navigation Arrows */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-full p-4 hover:bg-opacity-10 transition-all duration-300 group"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg border border-slate-200 rounded-full p-3 hover:shadow-xl transition-all duration-300 group"
           >
-            <ChevronLeft className="text-white opacity-70 group-hover:opacity-100" size={20} />
+            <ChevronLeft className="text-slate-600 group-hover:text-slate-800" size={20} />
           </button>
 
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-full p-4 hover:bg-opacity-10 transition-all duration-300 group"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg border border-slate-200 rounded-full p-3 hover:shadow-xl transition-all duration-300 group"
           >
-            <ChevronRight className="text-white opacity-70 group-hover:opacity-100" size={20} />
+            <ChevronRight className="text-slate-600 group-hover:text-slate-800" size={20} />
           </button>
 
           {/* Testimonial Content */}
-          <div className="mx-8 md:mx-12 bg-white bg-opacity-[0.03] backdrop-blur-sm border border-white border-opacity-10 rounded-3xl">
-            <div className="px-12 md:px-20 lg:px-24 py-12">
+          <div className="mx-6 md:mx-8 bg-white shadow-lg border border-slate-100 rounded-2xl">
+            <div className="px-8 md:px-16 lg:px-20 py-8">
               <div className="text-center">
-                <Quote className="text-white opacity-30 mx-auto mb-8" size={40} />
+                <Quote className="text-slate-300 mx-auto mb-6" size={32} />
                 
                 <div
                   key={currentIndex}
                   className="animate-fade-in"
                 >
-                  <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-10 font-light italic opacity-90 max-w-5xl mx-auto">
+                  <p className="text-base md:text-lg lg:text-xl text-slate-700 leading-relaxed mb-6 font-light italic max-w-6xl mx-auto">
                     "{testimonials[currentIndex].content}"
                   </p>
                   
-                  <div className="space-y-3">
-                    <div className="w-16 h-[1px] bg-white opacity-20 mx-auto mb-4"></div>
-                    <p className="text-white font-light text-lg opacity-80">
+                  <div className="space-y-2">
+                    <div className="w-12 h-[1px] bg-slate-200 mx-auto mb-3"></div>
+                    <p className="text-slate-800 font-medium text-base">
                       {testimonials[currentIndex].role}
                     </p>
-                    <p className="text-gray-400 text-sm font-light opacity-60">
+                    <p className="text-slate-500 text-sm font-light">
                       {testimonials[currentIndex].context}
                     </p>
                   </div>
@@ -142,15 +146,15 @@ const TestimonialsSlider: React.FC = () => {
           </div>
 
           {/* Progress Dots */}
-          <div className="flex justify-center space-x-4 mt-12">
+          <div className="flex justify-center space-x-3 mt-8">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-500 ${
                   index === currentIndex
-                    ? 'bg-white scale-125 opacity-100'
-                    : 'bg-white opacity-30 hover:opacity-50'
+                    ? 'bg-slate-600 scale-125'
+                    : 'bg-slate-300 hover:bg-slate-400'
                 }`}
               />
             ))}
@@ -158,24 +162,28 @@ const TestimonialsSlider: React.FC = () => {
         </div>
 
         {/* Auto-play indicator */}
-        <div className="flex justify-center mt-8">
-          <div className="flex items-center space-x-3 text-sm text-gray-500">
-            <div className={`w-1.5 h-1.5 rounded-full ${isAutoPlaying ? 'bg-white opacity-60 animate-pulse' : 'bg-white opacity-20'}`}></div>
-            <span className="font-light opacity-60">{isAutoPlaying ? 'Lecture automatique' : 'Pause'}</span>
+        <div className="flex justify-center mt-6">
+          <div className="flex items-center space-x-3 text-sm text-slate-500">
+            <div className={`w-1.5 h-1.5 rounded-full ${isAutoPlaying ? 'bg-slate-400 animate-pulse' : 'bg-slate-300'}`}></div>
+            <span className="font-light">{isAutoPlaying ? 'Lecture automatique' : 'Pause'}</span>
           </div>
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-16">
-          <div className="bg-white bg-opacity-[0.05] backdrop-blur-sm border border-white border-opacity-10 rounded-2xl p-8 max-w-md mx-auto">
-            <h3 className="text-xl font-light mb-3 text-white opacity-90">
+        <div className="text-center mt-12">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 max-w-md mx-auto shadow-sm">
+            <h3 className="text-lg font-medium mb-2 text-slate-800">
               Méditations Matinales
             </h3>
-            <p className="text-gray-400 mb-6 font-light text-sm opacity-70">
+            <p className="text-slate-600 mb-4 font-light text-sm">
               Transformez vos matinées avec la parole divine
             </p>
-            <button className="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 text-white px-8 py-3 rounded-xl font-light hover:bg-opacity-15 transition-all duration-300 text-sm">
-              En savoir plus
+            <button 
+              onClick={handleDownload}
+              className="bg-slate-800 text-white px-6 py-2.5 rounded-xl font-medium hover:bg-slate-700 transition-all duration-300 text-sm flex items-center justify-center space-x-2 mx-auto"
+            >
+              <Download className="w-4 h-4" />
+              <span>Télécharger l'app</span>
             </button>
           </div>
         </div>
