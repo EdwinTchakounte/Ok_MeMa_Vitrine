@@ -12,7 +12,7 @@ const Media: React.FC = () => {
       color: 'bg-red-500',
       hoverColor: 'hover:bg-red-600',
       url: 'https://www.youtube.com/@MEMA-APÔTREJEANYVESMBOUEME',
-      followers: '5.2K',
+      followers: '+100',
       description: 'Méditations quotidiennes et enseignements',
       verified: true
     },
@@ -22,7 +22,7 @@ const Media: React.FC = () => {
       color: 'bg-pink-500',
       hoverColor: 'hover:bg-pink-600',
       url: 'https://www.instagram.com/apotrejeanyvesmbouememema/',
-      followers: '3.8K',
+      followers: '+100',
       description: 'Citations inspirantes et moments de prière',
       verified: true
     },
@@ -32,7 +32,7 @@ const Media: React.FC = () => {
       color: 'bg-blue-600',
       hoverColor: 'hover:bg-blue-700',
       url: 'https://web.facebook.com/profile.php?id=61575737505381',
-      followers: '7.1K',
+      followers: '+100',
       description: 'Communauté et échanges spirituels',
       verified: true
     },
@@ -42,7 +42,7 @@ const Media: React.FC = () => {
       color: 'bg-slate-900',
       hoverColor: 'hover:bg-slate-800',
       url: 'https://www.tiktok.com/@aptre.jean.yves.m',
-      followers: '2.3K',
+      followers: '+100',
       description: 'Messages courts et percutants',
       verified: false
     }
@@ -51,25 +51,25 @@ const Media: React.FC = () => {
   const stats = [
     {
       icon: Users,
-      value: '18K+',
+      value: '1K+',
       label: 'Abonnés Total',
       color: 'text-blue-400'
     },
     {
       icon: Video,
-      value: '365',
+      value: '20+',
       label: 'Méditations Publiées',
       color: 'text-green-400'
     },
     {
       icon: Eye,
-      value: '1M+',
+      value: '1K+',
       label: 'Vues Total',
       color: 'text-purple-400'
     },
     {
       icon: Globe,
-      value: '50+',
+      value: '2+',
       label: 'Pays Touchés',
       color: 'text-orange-400'
     }
