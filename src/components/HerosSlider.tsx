@@ -12,7 +12,7 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    image: "https://images.pexels.com/photos/1624438/pexels-photo-1624438.jpeg?auto=compress&cs=tinysrgb&w=1024&h=576&fit=crop",
+    image: "JJP1.png",
     title: "Méditations Matinales",
     subtitle: "Commencez votre journée dans la paix",
     description: "Découvrez la sérénité à travers nos méditations guidées quotidiennes"
