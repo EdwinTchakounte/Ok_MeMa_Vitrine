@@ -1,154 +1,114 @@
 import React from 'react';
-import { Phone, Mail, MapPin, BookOpen, Heart, Star, Tv, Users, Crown, ArrowRight, CheckCircle, Zap, Target } from 'lucide-react';
+import { Phone, Mail, MapPin, BookOpen, Heart, Star, Users, ArrowRight } from 'lucide-react';
 
 const ApostleProfile = () => {
   const expertises = [
-    { name: 'Consultant conjugal', icon: Heart, level: 95 },
-    { name: 'Conseiller spirituel', icon: Star, level: 98 },
-    { name: 'Écrivain', icon: BookOpen, level: 90 }
+    { name: 'Consultant conjugal', icon: Heart },
+    { name: 'Conseiller spirituel', icon: Star },
+    { name: 'Écrivain', icon: BookOpen }
   ];
 
   const transfigurations = [
-    { name: 'Transfiguration Divine', icon: Crown, status: 'active' },
-    { name: 'Transfiguration spirituelle', icon: Zap, status: 'active' }, 
-    { name: 'Transfiguration sociale', icon: Users, status: 'progress' },
-    { name: 'Transfiguration financière', icon: Target, status: 'progress' }
+    'Transfiguration Divine',
+    'Transfiguration spirituelle', 
+    'Transfiguration sociale',
+    'Transfiguration financière'
   ];
-
-  const getStatusIcon = (status: string) => {
-    return status === 'active' ? CheckCircle : ArrowRight;
-  };
-
-  const getStatusColor = (status: string) => {
-    return status === 'active' ? 'text-emerald-500' : 'text-blue-500';
-  };
 
   return (
     <div className="max-w-7xl mx-auto">
-      {/* Header - Ultra Modern */}
+      {/* Header - Simplifié et Moderne */}
       <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-3 bg-slate-50 px-4 py-2 rounded-full text-sm text-slate-600 mb-8">
-          <Tv className="w-4 h-4" />
-          <span className="font-medium">Télévision Réveil</span>
-          <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-        </div>
-        
-        <div className="space-y-4 mb-8">
+        <div className="space-y-6 mb-8">
           <p className="text-slate-500 text-sm font-medium tracking-widest uppercase">
             Mission d'Évangélisation Apostolique
           </p>
-          <h1 className="text-5xl md:text-6xl font-extralight text-slate-900 tracking-tight">
-            Apôtre Jean Yves
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-slate-900 tracking-tight leading-tight">
+            Accompagnement Spirituel
             <br />
-            <span className="font-light bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
-              Mboueme
+            <span className="font-extralight bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
+              & Transformation Personnelle
             </span>
           </h1>
         </div>
         
         <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
-          Accompagnement spirituel et transformation personnelle
+          Découvrez un chemin vers l'épanouissement spirituel et personnel
         </p>
       </div>
 
-      {/* Main Grid - Modern Layout */}
+      {/* Main Grid - Layout Moderne */}
       <div className="grid lg:grid-cols-3 gap-16">
         
-        {/* Left Column - Expertises */}
+        {/* Left Column - Contenu Principal */}
         <div className="lg:col-span-2 space-y-16">
           
-          {/* Expertises avec barres de progression */}
+          {/* Expertises - Simplifié */}
           <section>
             <div className="flex items-center gap-4 mb-12">
-              <div className="w-12 h-0.5 bg-gradient-to-r from-slate-300 to-transparent"></div>
-              <h2 className="text-2xl font-light text-slate-900">Expertises</h2>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-slate-900 via-slate-400 to-transparent"></div>
+              <h2 className="text-3xl font-light text-slate-900 tracking-wide">Domaines d'Expertise</h2>
             </div>
             
-            <div className="space-y-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {expertises.map((expertise, index) => {
                 const IconComponent = expertise.icon;
                 return (
-                  <div key={index} className="group">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center group-hover:bg-slate-200 transition-colors">
-                          <IconComponent className="w-5 h-5 text-slate-600" />
-                        </div>
-                        <span className="text-lg font-medium text-slate-800">{expertise.name}</span>
-                      </div>
+                  <div key={index} className="group text-center">
+                    <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-all duration-300">
+                      <IconComponent className="w-8 h-8 text-slate-600" />
                     </div>
-                    
-                    {/* Barre de progression moderne */}
-                    <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-slate-400 to-slate-600 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${expertise.level}%` }}
-                      ></div>
-                    </div>
+                    <h3 className="text-lg font-medium text-slate-800">{expertise.name}</h3>
                   </div>
                 );
               })}
             </div>
           </section>
 
-          {/* Transfigurations avec statuts */}
+          {/* Transfigurations - Ultra Simplifié */}
           <section>
             <div className="flex items-center gap-4 mb-12">
-              <div className="w-12 h-0.5 bg-gradient-to-r from-slate-300 to-transparent"></div>
-              <h2 className="text-2xl font-light text-slate-900">Thèmes de Transfiguration</h2>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-slate-900 via-slate-400 to-transparent"></div>
+              <h2 className="text-3xl font-light text-slate-900 tracking-wide">Thèmes de Transfiguration</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
-              {transfigurations.map((theme, index) => {
-                const IconComponent = theme.icon;
-                const StatusIcon = getStatusIcon(theme.status);
-                return (
-                  <div 
-                    key={index}
-                    className="group p-6 bg-white border border-slate-100 rounded-2xl hover:border-slate-200 hover:shadow-sm transition-all duration-300"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center group-hover:bg-slate-100 transition-colors">
-                        <IconComponent className="w-6 h-6 text-slate-600" />
-                      </div>
-                      <StatusIcon className={`w-5 h-5 ${getStatusColor(theme.status)}`} />
-                    </div>
-                    
-                    <h3 className="text-slate-800 font-medium mb-2">{theme.name}</h3>
-                    
-                    {/* Indicateur de statut */}
-                    <div className="flex items-center gap-2">
-                      <div className={`w-2 h-2 rounded-full ${theme.status === 'active' ? 'bg-emerald-400' : 'bg-blue-400'}`}></div>
-                      <span className="text-sm text-slate-500 capitalize">
-                        {theme.status === 'active' ? 'Actif' : 'En cours'}
-                      </span>
-                    </div>
+              {transfigurations.map((theme, index) => (
+                <div 
+                  key={index}
+                  className="group p-6 bg-white border border-slate-200 rounded-2xl hover:border-slate-300 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-medium text-slate-800 group-hover:text-slate-900 transition-colors">
+                      {theme}
+                    </h3>
+                    <div className="w-2 h-2 bg-slate-400 rounded-full group-hover:bg-slate-600 transition-colors"></div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </section>
         </div>
 
         {/* Right Column - Contact Card */}
         <div className="lg:col-span-1">
-          <div className="bg-white border border-slate-100 rounded-3xl p-8 sticky top-8 shadow-sm">
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 sticky top-8 shadow-lg">
             
             {/* Header Contact */}
             <div className="text-center mb-8">
               <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-slate-600" />
               </div>
-              <h3 className="text-xl font-light text-slate-900">Contact</h3>
+              <h3 className="text-2xl font-light text-slate-900">Contact</h3>
             </div>
             
-            {/* Contact Info - Modern Cards */}
+            {/* Contact Info - Cartes Modernes */}
             <div className="space-y-6 mb-8">
               
               {/* Téléphones */}
-              <div className="p-4 bg-slate-50 rounded-xl">
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-100">
                 <div className="flex items-center gap-3 mb-3">
-                  <Phone className="w-4 h-4 text-slate-500" />
+                  <Phone className="w-5 h-5 text-slate-500" />
                   <span className="text-sm font-medium text-slate-600">Téléphone</span>
                 </div>
                 <div className="space-y-2">
@@ -158,9 +118,9 @@ const ApostleProfile = () => {
               </div>
 
               {/* Email */}
-              <div className="p-4 bg-slate-50 rounded-xl">
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-100">
                 <div className="flex items-center gap-3 mb-3">
-                  <Mail className="w-4 h-4 text-slate-500" />
+                  <Mail className="w-5 h-5 text-slate-500" />
                   <span className="text-sm font-medium text-slate-600">Email</span>
                 </div>
                 <a 
@@ -172,9 +132,9 @@ const ApostleProfile = () => {
               </div>
 
               {/* Adresse */}
-              <div className="p-4 bg-slate-50 rounded-xl">
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-100">
                 <div className="flex items-center gap-3 mb-3">
-                  <MapPin className="w-4 h-4 text-slate-500" />
+                  <MapPin className="w-5 h-5 text-slate-500" />
                   <span className="text-sm font-medium text-slate-600">Adresse</span>
                 </div>
                 <div className="text-slate-900 space-y-1">
@@ -185,21 +145,19 @@ const ApostleProfile = () => {
               </div>
             </div>
 
-            {/* CTA Button - Modern */}
-            <button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 group">
+            {/* CTA Button - Moderne */}
             <a
-                href="https://wa.me/237673071600"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 w-full justify-center"
+              href="https://wa.me/237673071600"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 group"
             >
-                <span>Prendre rendez-vous</span>
-            </a>
+              <span>Prendre rendez-vous</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
 
             {/* Footer - MEA Badge */}
-            <div className="mt-8 pt-6 border-t border-slate-100 text-center">
+            <div className="mt-8 pt-6 border-t border-slate-200 text-center">
               <div className="inline-flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-full">
                 <Users className="w-4 h-4 text-slate-600" />
                 <span className="text-sm font-medium text-slate-700">MEA</span>
