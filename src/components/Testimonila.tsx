@@ -187,7 +187,14 @@ const ApostleProfile = () => {
 
             {/* CTA Button - Modern */}
             <button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 group">
-              <span>Prendre rendez-vous</span>
+            <a
+                href="https://wa.me/237673071600"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 w-full justify-center"
+            >
+                <span>Prendre rendez-vous</span>
+            </a>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
 

@@ -9,6 +9,7 @@ import WhatsAppFloat from './components/WhatsAppFloat';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { supabase } from './lib/supabase';
 import ApostleProfile from './components/Testimonila';
+import TestimonialsSlider from './components/Testimonials';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ function App() {
           
           <Meditations />
           <Media />
+          <TestimonialsSlider />
         </main>
         <Footer />
         <WhatsAppFloat />
