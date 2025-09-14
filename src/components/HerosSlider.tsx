@@ -40,7 +40,7 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 5,
-    image: "https://images.pexels.com/photos/1624508/pexels-photo-1624508.jpeg?auto=compress&cs=tinysrgb&w=1024&h=576&fit=crop",
+    image: "https://images.pexels.com/photos/1624500/pexels-photo-1624500.jpeg?auto=compress&cs=tinysrgb&w=1024&h=576&fit=crop",
     title: "Paix Intérieure",
     subtitle: "Cultivez la sérénité",
     description: "Apprenez à trouver la tranquillité au cœur de votre être"

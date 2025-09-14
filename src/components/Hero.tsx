@@ -65,34 +65,23 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div className="flex flex-col lg:flex-row items-center justify-between min-h-[80vh] gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between min-h-[60vh] gap-8">
           
           {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left lg:pr-16 space-y-8">
+          <div className="flex-1 text-center lg:text-left lg:pr-16 space-y-6">
             <div className="animate-fadeInUp">
-              {/* Badge */}
-              <div className="inline-flex items-center bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full mb-8 shadow-sm border border-blue-100">
-                <Sparkles className="w-4 h-4 text-blue-500 mr-3" />
-                <span className="text-slate-600 font-medium text-sm tracking-wide">Ministère Spirituel</span>
-              </div>
-              
               {/* Main Title */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-[1.1] tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 leading-[1.1] tracking-tight">
                 Méditation Matinale
               </h1>
               
               {/* Subtitle */}
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-slate-600 mb-8 leading-relaxed">
+              <h2 className="text-lg md:text-xl lg:text-2xl font-light text-slate-600 mb-6 leading-relaxed">
                 {t('hero.subtitle')}
               </h2>
               
               {/* Decorative Line */}
-              <div className="w-24 h-0.5 bg-gradient-to-r from-blue-400 to-slate-300 mx-auto lg:mx-0 mb-10 rounded-full"></div>
-              
-              {/* Motto */}
-              <p className="text-2xl md:text-3xl font-light text-blue-600 mb-12 italic leading-relaxed">
-                "{t('hero.motto')}"
-              </p>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-blue-400 to-slate-300 mx-auto lg:mx-0 mb-8 rounded-full"></div>
               
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -121,7 +110,7 @@ const Hero: React.FC = () => {
           <div className="flex-1 lg:pl-8">
             <div className="relative">
               {/* Main Photo Container */}
-              <div className="w-80 h-80 lg:w-96 lg:h-96 mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200/50 transform hover:scale-[1.02] transition-all duration-500">
+              <div className="w-64 h-64 lg:w-80 lg:h-80 mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200/50 transform hover:scale-[1.02] transition-all duration-500">
                 <img
                   src="pasteur.jpg"
                   alt="Apôtre Jean Yves Mboueme"
@@ -143,7 +132,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
           <button
             onClick={scrollToNext}
             className="animate-bounce text-slate-400 hover:text-blue-500 transition-colors duration-300 p-4 bg-white/60 backdrop-blur-sm rounded-full shadow-sm hover:shadow-md border border-slate-100/50"
