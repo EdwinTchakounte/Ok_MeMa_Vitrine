@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { supabase } from './lib/supabase';
+import ApostleProfile from './components/Testimonila';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,8 @@ function App() {
         <main>
           <Hero />
           <About />
+          <ApostleProfile />
+          
           <Meditations />
           <Media />
         </main>
