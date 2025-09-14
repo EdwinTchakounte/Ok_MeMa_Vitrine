@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <p className="text-slate-300 font-inter">
                 <span className="block">Email:</span>
-                <span className="text-golden">contact@mema-ministere.org</span>
+                <span className="text-golden">apotrejeanyvesmboueme@gmail.com</span>
               </p>
               <p className="text-slate-300 font-inter">
                 <span className="block">WhatsApp:</span>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
               </p>
               <p className="text-slate-300 font-inter">
                 <span className="block">Localisation:</span>
-                <span className="text-golden">Dschang - Cameroun</span>
+                <span className="text-golden">Dschang,Immeuble Azinmeda Derriere Hotel le Mbouah - Cameroun</span>
               </p>
             </div>
           </div>

@@ -18,7 +18,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'MEMA',
-    'hero.subtitle': 'Ministère de l\'Éveil et des Méditations Apostoliques',
+    'hero.subtitle': 'Mission d\'Evangilisation Apostolique',
     'hero.motto': 'Éveiller les esprits, nourrir les âmes',
     'hero.download': 'Télécharger MEMA',
     'hero.watch': 'Regarder la méditation',
@@ -71,7 +71,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'MEMA',
-    'hero.subtitle': 'Ministry of Awakening and Apostolic Meditations',
+    'hero.subtitle': 'Apostolic Evangilization Mission',
     'hero.motto': 'Awakening minds, nourishing souls',
     'hero.download': 'Download MEMA',
     'hero.watch': 'Watch meditation',
