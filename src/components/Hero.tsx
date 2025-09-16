@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
-                  href="https://drive.google.com/file/d/16teXJzvh0QUE-iW2qBveW39bsPizLj6i/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/19BCNSPsgnf11YMq_JdO0TcU9nbyS3_br/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group bg-slate-800 text-white px-8 py-4 rounded-2xl font-medium text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-3"
